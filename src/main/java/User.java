@@ -1,77 +1,80 @@
 import java.time.LocalDate;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 
 public class User implements Comparable<User> {
-    //
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
+        private int id;
+        private String name;
+        private String surName;
+        private String tel;
+        private LocalDate birthday = LocalDate.now();
 
-
-        private int ID;
-        private String Name;
-        private String SurName;
-        private String Tel;
-        private LocalDate Birthday;
-
-        public User(String Name, String SurName, String Tel, LocalDate Birthday) {
-            this.Name = Name;
-            this.SurName = SurName;
-            this.Tel = Tel;
-            this.Birthday = Birthday;
+        public User(String name, String surName, String tel, LocalDate birthday) {
+            this.name = name;
+            this.surName = surName;
+            this.tel = tel;
+            this.birthday = birthday;
         }
         public User() {
-
+            super();
         }
+
+        @XmlElement(name = "id")
         public void setID(int ID) {
-            this.ID = ID;
+            this.id = ID;
         }
 
         public int getID() {
-            return this.ID;
+            return this.id;
         }
 
-        public void setName(String Name) {
-            this.Name = Name;
+       @XmlElement(name = "name")
+       public void setName(String name) {
+            this.name = name;
         }
 
         public String getName() {
-            return this.Name;
+            return this.name;
         }
 
-        public void setSurName(String SurName) {
-            this.SurName = SurName;
+       @XmlElement(name = "sur")
+       public void setSurName(String surName) {
+            this.surName = surName;
         }
 
         public String getSurName() {
-            return this.SurName;
+            return this.surName;
         }
 
-        public void setTel(String Tel) {
-            this.Tel = Tel;
+       @XmlElement(name = "tel")
+       public void setTel(String tel) {
+            this.tel = tel;
         }
 
         public String getTel() {
-            return this.Tel;
+            return this.tel;
         }
 
-        public void setBirthday(LocalDate Birthday) {
-            this.Birthday = Birthday;
+       @XmlElement(name = "birth")
+       @XmlJavaTypeAdapter(value = DateAdapter.class)
+       public void setBirthday(LocalDate birthday) {
+            this.birthday = birthday;
         }
 
         public LocalDate getBirthday() {
-            return this.Birthday;
+            return this.birthday;
         }
 
         public String toString() {
-            return "ID - " + this.ID + " Name - " + this.Name + " Surname - " + this.SurName + " Tel - " + this.Tel + " Birthday - " + this.Birthday;
+            return "ID - " + this.id + " Name - " + this.name + " Surname - " + this.surName + " Tel - " + this.tel + " Birthday - " + this.birthday;
         }
 
-        public int compareTo(User SurName) {
-            return this.SurName.compareTo(SurName.getSurName());
+        public int compareTo(User user) {
+            return this.surName.compareTo(user.getSurName());
         }
 
-        public boolean check(User user) {
-            return this.getTel().equalsIgnoreCase(user.getTel()) || this.getID() == user.getID();
-        }
+       // public boolean check(User user) {
+         //   return this.getTel().equalsIgnoreCase(user.getTel()) || this.getID() == user.getID();
+        //}
     }
-
-
