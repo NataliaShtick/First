@@ -1,3 +1,7 @@
+package company;
+
+import company.User.User;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
@@ -5,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 
 @XmlRootElement
-public class Repository {
+    public class Repository {
 
        private List<User> users = new ArrayList<>();
 
@@ -30,6 +34,7 @@ public class Repository {
 
            return res;
        }
+
 
        public void setUsers(ArrayList<User> users){
            this.users = users;

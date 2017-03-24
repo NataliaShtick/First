@@ -1,8 +1,11 @@
-import java.time.LocalDate;
-import java.lang.String;
+package company.Car;
+
+import company.IO.DateAdapter;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.time.LocalDate;
 
 @XmlRootElement
     public class Car implements Comparable<Car> {
@@ -55,7 +58,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
         }
 
         public String toString() {
-            return "Model" + this.model + " Color " + this.color + " Number " + this.number + " Date of issue " + this.dateOfIssue;
+            return " Model " + this.model + " Color " + this.color + " Number " + this.number + " Date of issue " + this.dateOfIssue;
         }
 
         public int compareTo(Car ob) {
@@ -64,7 +67,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 
-    //public boolean check1(Car car) {
+    //public boolean check1(company.Car.Car car) {
         //return this.getNumber().equalsIgnoreCase(car.getNumber());
     //}
 

@@ -1,5 +1,7 @@
-import java.time.LocalDate;
+package company.IO;
+
 import javax.xml.bind.annotation.adapters.XmlAdapter;
+import java.time.LocalDate;
 
 
 public class DateAdapter extends XmlAdapter<String, LocalDate> {

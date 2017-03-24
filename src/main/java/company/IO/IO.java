@@ -1,3 +1,7 @@
+package company.IO;
+
+import company.User.User;
+
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
 

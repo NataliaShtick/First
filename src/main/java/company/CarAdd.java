@@ -1,9 +1,12 @@
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+package company;
+
+import company.Car.Car;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 @XmlRootElement
 public class CarAdd {

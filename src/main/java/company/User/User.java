@@ -1,8 +1,13 @@
-import java.time.LocalDate;
+package company.User;
+
+import company.IO.DateAdapter;
+
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.time.LocalDate;
 
-
+@XmlRootElement
 public class User implements Comparable<User> {
         private int id;
         private String name;
